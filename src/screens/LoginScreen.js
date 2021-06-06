@@ -38,10 +38,7 @@ const LoginScreen = ({ navigation }) => {
 
           <TouchableOpacity
             style={{ backgroundColor: COLORS.primaryShade, paddingVertical: 20, borderRadius: 20, alignItems: 'center', justifyContent: 'center', marginVertical: 32 }}
-            onPress={() => navigation.reset({
-              index: 0,
-              routes: [{ name: 'Home'}],
-            })}
+            onPress={() => navigation.replace('Home')}
           >
             <Text style={{ color: COLORS.white, ...typography.bold }}>Log in</Text>
           </TouchableOpacity>

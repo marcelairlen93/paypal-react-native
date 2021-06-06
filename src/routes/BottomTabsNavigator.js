@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreenNavigator } from './HomeScreenNavigator';
 import { ContactsScreen } from '../screens/ContactsScreen';
@@ -42,58 +41,56 @@ const BottomTabs = () => {
       activities: [transactions, setTransactions],
       balance: [balance, setBalance],
     }}>
-      <NavigationContainer independent={true}>
-        <Tab.Navigator
-          tabBarOptions={{
-            labelPosition: 'beside-icon',
-            activeTintColor: COLORS.primary,
-            inactiveTintColor: '#243656',
-            style: {
-              height: 70,
-              borderTopLeftRadius: 40,
-              paddingHorizontal: 40,
-            },
-          }}
-          screenOptions={({ route }) => ({
-            tabBarLabel: ({ focused }) => {
-              return <Text style={{ color: COLORS.primary, ...typography.small, marginLeft: 16 }}>{focused ? route.name : ''}</Text>
-            },
-          })}
-        >
-          <Tab.Screen name="Home" component={HomeScreenNavigator} options={{
-            tabBarIcon: ({ focused }) => {
-              if (focused) {
-                return <HomeIconActive />
-              }
-              return <HomeIcon />
+      <Tab.Navigator
+        tabBarOptions={{
+          labelPosition: 'beside-icon',
+          activeTintColor: COLORS.primary,
+          inactiveTintColor: '#243656',
+          style: {
+            height: 70,
+            borderTopLeftRadius: 40,
+            paddingHorizontal: 40,
+          },
+        }}
+        screenOptions={({ route }) => ({
+          tabBarLabel: ({ focused }) => {
+            return <Text style={{ color: COLORS.primary, ...typography.small, marginLeft: 16 }}>{focused ? route.name : ''}</Text>
+          },
+        })}
+      >
+        <Tab.Screen name="Home" component={HomeScreenNavigator} options={{
+          tabBarIcon: ({ focused }) => {
+            if (focused) {
+              return <HomeIconActive />
             }
-          }} />
-          <Tab.Screen name="Contatos" component={ContactsScreenNavigator} options={{
-            tabBarIcon: ({ focused }) => {
-              if (focused) {
-                return <ContactsIconActive />
-              }
-              return <ContactsIcon />
+            return <HomeIcon />
+          }
+        }} />
+        <Tab.Screen name="Contatos" component={ContactsScreenNavigator} options={{
+          tabBarIcon: ({ focused }) => {
+            if (focused) {
+              return <ContactsIconActive />
             }
-          }}  />
-          <Tab.Screen name="Carteira" component={WalletScreen} options={{
-            tabBarIcon: ({ focused }) => {
-              if (focused) {
-                return <WalletIconActive />
-              }
-              return <WalletIcon />
+            return <ContactsIcon />
+          }
+        }}  />
+        <Tab.Screen name="Carteira" component={WalletScreen} options={{
+          tabBarIcon: ({ focused }) => {
+            if (focused) {
+              return <WalletIconActive />
             }
-          }}  />
-          <Tab.Screen name="Configs" component={WalletScreen} options={{
-            tabBarIcon: ({ focused }) => {
-              if (focused) {
-                return <SettingsIconActive />
-              }
-              return <SettingsIcon />
+            return <WalletIcon />
+          }
+        }}  />
+        <Tab.Screen name="Configs" component={WalletScreen} options={{
+          tabBarIcon: ({ focused }) => {
+            if (focused) {
+              return <SettingsIconActive />
             }
-          }}  />
-        </Tab.Navigator>
-      </NavigationContainer>
+            return <SettingsIcon />
+          }
+        }}  />
+      </Tab.Navigator>
     </AppContext.Provider>
   );
 };
