@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreenNavigator } from './HomeScreenNavigator';
@@ -16,7 +16,6 @@ import SettingsIconActive from '../../assets/settings-icon-active.svg';
 
 import { COLORS } from '../config/colors';
 import { typography } from '../config/typography';
-import { useState } from 'react/cjs/react.development';
 import { contacts } from '../config/contactsMock';
 import { getTransactions } from '../config/activitiesMock';
 import { AppContext } from '../context/AppContext';

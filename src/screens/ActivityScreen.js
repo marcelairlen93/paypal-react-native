@@ -1,11 +1,10 @@
+import React, { useContext, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StatusBar as Bar } from 'react-native';
 import { COLORS } from '../config/colors';
 import { typography } from '../config/typography';
 
 import SearchButton from '../../assets/search-button.svg';
-import { useContext, useState } from 'react/cjs/react.development';
 import { ActivityCard } from '../components/ActivityCard';
 import { AppContext } from '../context/AppContext';
 import { Header } from '../components/Header';

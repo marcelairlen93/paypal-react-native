@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
+import { StatusBar } from 'expo-status-bar';
 import { View, Text, StatusBar as Bar, TextInput, TouchableWithoutFeedback, Keyboard, Dimensions } from 'react-native';
 import { ContactCard } from '../components/ContactCard';
 import { Keyboard as KeyboardInScreen } from '../components/KeyboardInScreen';

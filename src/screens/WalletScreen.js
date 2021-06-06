@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
+import { StatusBar } from 'expo-status-bar';
 import { View, Text, StatusBar as Bar, Dimensions, Image, TouchableOpacity, FlatList } from 'react-native';
 import { Header } from '../components/Header';
 import { COLORS } from '../config/colors';

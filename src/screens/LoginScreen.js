@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, Dimensions, KeyboardAvoidingView, Platform, TextInput, SafeAreaView, TouchableOpacity, StatusBar as Bar } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import Logo from '../../assets/logo.svg';
-import { useState } from 'react';
 import { COLORS } from '../config/colors';
 import { typography } from '../config/typography';
 
