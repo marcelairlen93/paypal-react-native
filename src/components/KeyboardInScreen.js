@@ -59,6 +59,7 @@ export const Keyboard = ({ onChangeText }) => (
       <View key={index.toString()} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
         {line.map(({ value }) => (
           <TouchableHighlight
+            key={value}
             style={{ backgroundColor: COLORS.white, width: keyboardButtonSize, height: keyboardButtonSize, justifyContent: 'center', alignItems: 'center', margin: 8, borderRadius: keyboardButtonSize }}
             underlayColor={COLORS.primary}
             onPress={() => onChangeText(value)}

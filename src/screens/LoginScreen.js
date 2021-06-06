@@ -14,8 +14,8 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
-      <StatusBar style="dark" />
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.gray }}>
+      <StatusBar style="dark" backgroundColor={COLORS.gray} />
         <View style={{ flex: 1, paddingHorizontal: 56 }} >
           
           <View style={{ alignSelf: 'center', paddingVertical: height / 6, marginTop: Bar.currentHeight }}>
@@ -23,14 +23,14 @@ const LoginScreen = ({ navigation }) => {
           </View>
 
           <TextInput
-            placeholder="Enter your name or email"
-            style={{ marginBottom: 16, borderWidth: 2, borderRadius: 20, borderColor: COLORS.gray, paddingVertical: 20, paddingHorizontal: 36, ...typography.small, color: COLORS.blackOpacity }}
+            placeholder="Nome de usuário ou e-mail"
+            style={{ marginBottom: 16, borderWidth: 2, borderRadius: 20, borderColor: COLORS.black10, paddingVertical: 20, paddingHorizontal: 36, ...typography.small, color: COLORS.blackOpacity }}
             value={login}
             onChangeText={(value) => setLogin(value)}
           />
           <TextInput
-            placeholder="Password"
-            style={{ borderWidth: 2, borderRadius: 20, borderColor: COLORS.gray, paddingVertical: 20, paddingHorizontal: 36, ...typography.small, color: COLORS.blackOpacity }}
+            placeholder="Digite sua senha"
+            style={{ borderWidth: 2, borderRadius: 20, borderColor: COLORS.black10, paddingVertical: 20, paddingHorizontal: 36, ...typography.small, color: COLORS.blackOpacity }}
             value={password}
             onChangeText={(value) => setPassword(value)}
           />
@@ -39,17 +39,17 @@ const LoginScreen = ({ navigation }) => {
             style={{ backgroundColor: COLORS.primaryShade, paddingVertical: 20, borderRadius: 20, alignItems: 'center', justifyContent: 'center', marginVertical: 32 }}
             onPress={() => navigation.replace('Home')}
           >
-            <Text style={{ color: COLORS.white, ...typography.bold }}>Log in</Text>
+            <Text style={{ color: COLORS.white, ...typography.bold }}>Entrar</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={{ alignSelf: 'center', paddingVertical: 30}}>
-            <Text style={{ color: COLORS.blackOpacity, ...typography.small}}>Having trouble logging in?</Text>
+            <Text style={{ color: COLORS.blackOpacity, ...typography.small}}>Problemas para entrar?</Text>
           </TouchableOpacity>
 
           <View style={{ width: 65, alignSelf: 'center', height: 2, backgroundColor: COLORS.gray, marginBottom: 24 }} />
 
           <TouchableOpacity style={{ alignSelf: 'center', paddingBottom: 56}} onPress={() => {}}>
-            <Text style={{ color: COLORS.blackOpacity, ...typography.small}}>Sign up</Text>
+            <Text style={{ color: COLORS.blackOpacity, ...typography.small}}>Cadastrar</Text>
           </TouchableOpacity>
           
         </View>
