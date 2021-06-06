@@ -10,7 +10,7 @@ import { typography } from '../config/typography';
 
 const { width, height } = Dimensions.get('window');
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 
@@ -38,7 +38,10 @@ const LoginScreen = () => {
 
           <TouchableOpacity
             style={{ backgroundColor: COLORS.primaryShade, paddingVertical: 20, borderRadius: 20, alignItems: 'center', justifyContent: 'center', marginVertical: 32 }}
-            onPress={() => {}}
+            onPress={() => navigation.reset({
+              index: 0,
+              routes: [{ name: 'Home'}],
+            })}
           >
             <Text style={{ color: COLORS.white, ...typography.bold }}>Log in</Text>
           </TouchableOpacity>
