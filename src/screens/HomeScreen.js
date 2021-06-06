@@ -46,7 +46,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.gray}}>
-      <StatusBar style='light' backgroundColor={COLORS.primary} />
+      <StatusBar style='light' backgroundColor={COLORS.primaryDark} />
       <View style={{ flex: 1 }}>
         <View style={{ backgroundColor: COLORS.primaryDark, paddingBottom: 24, borderBottomRightRadius: 36 }}>
           <View style={{ position: 'absolute', top: -(69 + Bar.currentHeight), left: -89, opacity: 0.3 }}><LogoShadow /></View>
