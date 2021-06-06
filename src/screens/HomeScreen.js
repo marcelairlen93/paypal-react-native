@@ -54,9 +54,8 @@ const HomeScreen = ({ navigation }) => {
           <View style={{ marginTop: Bar.currentHeight, paddingVertical: 24, paddingHorizontal: 32, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
             <LogoWhite />
 
-            <View style={{ width: 56, height: 56, alignItems: 'center', justifyContent: 'center', borderColor: COLORS.primary, borderRadius: 20, borderWidth: 2, position: 'relative' }}>
-              <View style={{ width: 56, height: 56, borderColor: COLORS.primary, borderRadius: 20, borderWidth: 2, position: 'absolute', zIndex: 3 }} />
-              <Image source={Avatar} style={{ width: 52, height: 52, borderRadius: 40, overflow: 'hidden' }} resizeMode="contain" />
+            <View style={{ width: 52, height: 52, alignItems: 'center', justifyContent: 'center', borderColor: COLORS.primary, borderRadius: 20, borderWidth: 2, overflow: 'hidden' }}>
+              <Image source={Avatar} style={{ width: 52, height: 52 }} resizeMode="contain" />
             </View>
           </View>
 
